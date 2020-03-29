@@ -16,13 +16,7 @@ def db_creator(db_type, source, dest):
     else:
         raise ValueError('unknown db_type ' + db_type)
 
-
-if __name__ == '__main__':
-    if "--stdin" in sys.argv:
-        config_reader.initialize(sys.stdin)
-    else:
-        config_reader.initialize()
-
+def subset_database(config_reader, copy_schema_constraints=True):
     db_type = config_reader.get_db_type()
     source_dbc = DbConnect(db_type, config_reader.get_source_db_connection_info())
     destination_dbc = DbConnect(db_type, config_reader.get_destination_db_connection_info())
@@ -42,7 +36,7 @@ if __name__ == '__main__':
         subsetter.prep_temp_dbs()
         subsetter.run_middle_out()
 
-        if "--no-constraints" not in sys.argv:
+        if copy_schema_constraints:
             database.add_constraints()
 
         print("Beginning post subset SQL calls")
