@@ -1,6 +1,5 @@
 import os, urllib, subprocess
-from db_connect import DbConnect
-import database_helper
+from . import database_helper
 
 class PsqlDatabaseCreator:
     def __init__(self, source_dbc, destination_dbc, use_existing_dump = False):

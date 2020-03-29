@@ -1,6 +1,6 @@
-import config_reader
-import database_helper
-from db_connect import MySqlConnection
+from . import config_reader
+from . import database_helper
+from .db_connect import MySqlConnection
 
 
 def tabulate(source_dbc, destination_dbc, tables):

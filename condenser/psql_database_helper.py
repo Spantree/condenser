@@ -1,5 +1,5 @@
 import os, uuid, csv
-import config_reader
+from . import config_reader
 from pathlib import Path
 from psycopg2.extras import execute_values, register_default_json, register_default_jsonb
 from subset_utils import columns_joined, columns_tupled, schema_name, table_name, fully_qualified_table, redact_relationships, quoter

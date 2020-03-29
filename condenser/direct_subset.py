@@ -1,5 +1,5 @@
 import uuid, sys
-import config_reader, result_tabulator
+from . import config_reader, result_tabulator
 import time
 from subset import Subset
 from psql_database_creator import PsqlDatabaseCreator

@@ -1,5 +1,5 @@
 import os, uuid, csv
-import config_reader
+from . import config_reader
 from pathlib import Path
 from subset_utils import columns_joined, columns_tupled, quoter, schema_name, table_name, fully_qualified_table, redact_relationships
 

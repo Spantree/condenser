@@ -1,4 +1,4 @@
-import config_reader
+from . import config_reader
 import psycopg2, mysql.connector
 import os, pathlib, re, urllib, subprocess, os.path, json, getpass, time, sys, datetime
 
