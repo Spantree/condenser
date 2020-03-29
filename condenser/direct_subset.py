@@ -16,7 +16,7 @@ def db_creator(db_type, source, dest):
     else:
         raise ValueError('unknown db_type ' + db_type)
 
-def subset_database(config_reader, copy_schema_constraints=True):
+def subset_database(copy_schema_constraints=True):
     db_type = config_reader.get_db_type()
     source_dbc = DbConnect(db_type, config_reader.get_source_db_connection_info())
     destination_dbc = DbConnect(db_type, config_reader.get_destination_db_connection_info())
