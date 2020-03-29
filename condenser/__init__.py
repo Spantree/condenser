@@ -1,2 +1,2 @@
-import config_reader
-from direct_subset import subset_database
+from .config_reader import initialize
+from .direct_subset import subset_database
