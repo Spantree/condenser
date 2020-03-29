@@ -1,12 +1,12 @@
 import uuid, sys
 from . import config_reader, result_tabulator
 import time
-from subset import Subset
-from psql_database_creator import PsqlDatabaseCreator
-from mysql_database_creator import MySqlDatabaseCreator
-from db_connect import DbConnect
-from subset_utils import print_progress
-import database_helper
+from .subset import Subset
+from .psql_database_creator import PsqlDatabaseCreator
+from .mysql_database_creator import MySqlDatabaseCreator
+from .db_connect import DbConnect
+from .subset_utils import print_progress
+from . import database_helper
 
 def db_creator(db_type, source, dest):
     if db_type == 'postgres':
